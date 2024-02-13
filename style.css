@@ -1,0 +1,40 @@
+
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333333;
+}
+
+.loader::after{
+    content: "";
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    animation: loading .3s ease infinite;
+    /* transition: all .1s; */
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
